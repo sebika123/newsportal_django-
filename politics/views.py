@@ -5,7 +5,7 @@ from politics.models import content
 
 def politics(request):
     politics=content.objects.all()
-    return render(request,'politics.html',{'politics':politics})
+    return render(request,'home.html',{'politics':politics})
 
 
 

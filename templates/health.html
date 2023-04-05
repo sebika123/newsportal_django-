@@ -10,65 +10,28 @@
 {% endblock  %}
 
 
-{% block content%}
+
+
+{% block content %}
 
 <section class="row" id="latest">
-  
+  {% for s in health %}
+
   <div class="col-lg-3 col-md-4">
     <div class="card">
-      <img src="/media/ {{h.image}}" class="card-img-top" alt="...">
+      <img src="/media/{{s.image}}" class="card-img-top" alt="photo">
       <div class="card-body">
-        <h5 class="card-title">{{h.name}}</h5>
+        <h5 class="card-title">{{s.name}}</h5>
         
-        <p class="card-text">{{h.time}}</p>
-        <a href="#" class="btn btn-primary">
+        <p class="card-text">{{s.time}}</p>
+        <a href="#" class="btn btn-primary">Click Here
           <i class="bi bi-cart"></i>
         </a>
        
       </div>
     </div>
   </div>
-  
-    <div class="col-lg-3 col-md-4">
-      <div class="card">
-        <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Foundation</h5>
-          <p class="card-text">NRs. 5000</p>
-          <a href="#" class="btn btn-primary">
-            Details
-          </a>
-        </div>
-      </div>
-    </div> 
-  
-    <div class="col-lg-3 col-md-4">
-      <div class="card">
-        <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Foundation</h5>
-          <p class="card-text">NRs. 5000</p>
-          <a href="#" class="btn btn-primary">Details
-          </a>
-         
-        </div>
-      </div>
-    </div>
-  
-    <div class="col-lg-3 col-md-4">
-      <div class="card">
-        <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Foundation</h5>
-          <p class="card-text">NRs. 5000</p>
-          <a href="#" class="btn btn-primary">Details
-            
-          </a>
-        </div>
-      </div>
-    </div>
 
 
-
-
+{% endfor %}
 {% endblock  %}

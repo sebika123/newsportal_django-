@@ -1,18 +1,7 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
-
-{% block title %}
-<div>
-    <a class="navbar-brand" href="#">
-      <img src="{% static 'images/logo.png' %}" alt="logo" id="logo"/>
-    </a>
-  </div>
-
-
-  
-
-{% endblock  %}
 
 
 {% block content%}
@@ -23,16 +12,16 @@
     <h2 class="text-center m-5">Latest News</h2>
   </div>
 
-  {% for h in home %}
-hello world
+  {% for p in home %}
+
   <div class="col-lg-3 col-md-4">
     <div class="card">
-      <img src="/media/ {{h.image}}" class="card-img-top" alt="...">
+      <img src="/media/{{p.image}}" class="card-img-top" alt="photo">
       <div class="card-body">
-        <h5 class="card-title">{{h.name}}</h5>
+        <h5 class="card-title">{{p.name}}</h5>
         
-        <p class="card-text">{{h.time}}</p>
-        <a href="#" class="btn btn-primary">
+        <p class="card-text">{{p.time}}</p>
+        <a href="#" class="btn btn-primary">Click Here
           <i class="bi bi-cart"></i>
         </a>
        

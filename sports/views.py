@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from politics.models import content
+from sports.models import content
 
 
 def sports(request):

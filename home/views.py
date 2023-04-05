@@ -1,11 +1,11 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from politics.models import content
+from home.models import Content
 
 
 def home(request):
-    home=content.objects.all()
+    home=Content.objects.all()
     return render(request,'home.html',{'home':home})
 
 

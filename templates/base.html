@@ -37,13 +37,23 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {% if user.is_authenticated %} {{ request.user }} {% else %} user {% endif %}
                   Membership
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Register</a></li>
-                  <li><a class="dropdown-item" href="#">Login</a></li>
-                  <li><a class="dropdown-item" href="#">LogOut</a></li>
-                </ul>
+                  {% if user.is_authenticated %} 
+                  <li> <a class="dropdown-item" href="">Wishlist <a/></li>
+                    <li> <a  class="dropdown-item" href="">Cart <a/></li>
+                      <li> <a  class="dropdown-item" href="{% url 'logout' %}">logout<a/></li>
+                        {% else %}
+                
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+                                  {% endif %}
+                                  </ul>
+                                </li>
+                
+                              </ul>
               </li>
             </ul>
           </div>

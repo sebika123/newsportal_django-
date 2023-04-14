@@ -2,7 +2,7 @@
 from django.db import models
 
 # Create your models here.
-class Content(models.Model):
+class content(models.Model):
     name=models.CharField(max_length=255)
     time=models.TimeField()
     image=models.ImageField(upload_to='home')

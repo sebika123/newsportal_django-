@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from health.models import Content
+from health.models import content
 
 
 def health(request):
-    health=Content.objects.all()
+    health=content.objects.all()
     return render(request,'health.html',{'health':health})
 
 

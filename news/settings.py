@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'sports',
     'home',
     'ckeditor',
+    'accounts',
+    'user',
     'ckeditor_uploader'
 ]
 

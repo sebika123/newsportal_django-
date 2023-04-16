@@ -6,7 +6,7 @@ from home.models import content
 
 def home(request):
     home=content.objects.all()
-    return render(request,'home.html',{'home':home})
+    return render(request,'home.html',{'home':home} )
 
 
 

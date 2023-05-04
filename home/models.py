@@ -24,7 +24,7 @@ class Details(models.Model):
     
 
     author = models.CharField(max_length=255)
-    
+    #author=models.CharField(max_length=255)
     name=models.ForeignKey(content, on_delete=models.CASCADE,related_name='names')
     time=models.TimeField()
     

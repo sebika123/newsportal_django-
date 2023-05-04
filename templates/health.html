@@ -24,7 +24,7 @@
         <h5 class="card-title">{{s.name}}</h5>
         
         <p class="card-text">{{s.time}}</p>
-        <a href="#" class="btn btn-primary">Click Here
+        <a href="{{s.id}}" class="btn btn-primary">Click Here
           <i class="bi bi-cart"></i>
         </a>
         <button class="btn btn-outline-primary like-btn" data-article-id="{{ article.id }}">
@@ -32,21 +32,9 @@
           <span class="like-count">{{ article.like_set.count }}</span>
       </button>
       
-      <script>
-          $(document).ready(function() {
-              $('.like-btn').click(function() {
-                  var articleId = $(this).data('article-id');
-                  $.ajax({
-                      method: 'POST',
-                      url: '/likes/create/' + articleId + '/',
-                      success: function(data) {
-                          $('.like-count[data-article-id="' + articleId + '"]').text(data.like_count);
-                      }
-                  });
-              });
-          });
+    
+      <script src="script.js">
       </script>
-      
        
       </div>
     </div>

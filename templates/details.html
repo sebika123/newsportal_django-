@@ -1,0 +1,28 @@
+
+{% extends 'home.html' %}
+
+{% block title %}
+
+
+{% endblock%}
+
+
+
+
+
+{% block content%}
+
+<div class="home">
+    
+        <div class="news-article">
+            <h2>{{ details.name }}</h2>
+           
+                <img src="{{ details.image.url }}" alt="{{ details.name }}">
+          
+            <p>{{ details.content }}</p>
+            <p>Published by {{ details.author }} on {{ details.time }}</p>
+        </div>
+   
+</div>
+  
+{% endblock%}

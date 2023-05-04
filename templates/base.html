@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>      Enews    </title>
 
-    <link href="{% static 'style.css' %}" rel="stylesheet" />
+    <link href="{% static 'style.css' %}" rel="stylesheet"/>
     
  
 
@@ -35,10 +35,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="sports">Sports</a>
               </li>
+             
+            
+            
+
+
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {% if user.is_authenticated %} {{ request.user }} {% else %} user {% endif %}
-                  Membership
+                  
                 </a>
                 <ul class="dropdown-menu">
                   {% if user.is_authenticated %} 
@@ -54,6 +59,8 @@
                                 </li>
                 
                               </ul>
+  
+  
                               <form class="d-flex" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -104,7 +111,7 @@
                               <h1 class="modal-title fs-5" id="registerModalLabel">User Registration</h1>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
+                            <class="modal-body">
                               <form action="{% url 'register' %}" method="post">
                                 {% csrf_token %}
                                 <div class="mb-3">
@@ -139,30 +146,42 @@
                                   <input type="submit" class="btn btn-primary" value="Register">
                                 </div>
                               </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
+                            
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                           </div>
                         </div>
                       </div>
-              </li>
-            </ul>
-          </div>
+                    </div>
+            </li>
+          </ul>
         </div>
-      </nav>
-   
-      <div>
-        <a class="navbar-brand" href="#">
-          <img src="{% static 'images/logo.png' %}" alt="logo" id="logo"/>
-        </a>
       </div>
-    
+    </nav>
+
+
+
+
+              
+
+
+
+
+
+
+  <div>
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'images/logo.png' %}" alt="logo" id="logo"/>
+    </a>
+  </div>
+
 {% endif %}
 
-      {% block title %}
 
-{% endblock %}
+
+
+
     
 </head>
 <body>

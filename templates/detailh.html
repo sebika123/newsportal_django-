@@ -1,0 +1,32 @@
+
+{% extends 'health.html' %}
+
+{% block title %}
+
+<div class="col-12">
+    <h2 class="text-center m-5">Health</h2>
+  </div>
+
+{% endblock%}
+
+
+
+
+
+{% block content %}
+<div class="health">
+  
+        <div class="news-article">
+            
+
+            <h2>{{ detailh.name }}</h2>
+            
+                <img src="media/{{ detailh.image }}" alt="{{detailh.name}}">
+            
+            <p>{{ detailh.content }}</p>
+            <p>Published by {{ detailh.author }} on {{ detailh.time }}</p>
+        </div>
+ 
+</div>
+  
+{% endblock%}

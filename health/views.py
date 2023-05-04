@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from health.models import content
+from health.models import content,Detailh
 
 
 def health(request):
@@ -9,8 +9,9 @@ def health(request):
 
 
 
-def details(request):
-    details=health.objects.filter(id=id)
-    details=health.objects.get(id=id)
-    return HttpResponse(details[0].content)
+def detailh(request,id):
+    
+    detailh_qs=Detailh.objects.filter(id=id)
+    detailh=Detailh.objects.get(id=id)
+    return render(request, 'detailh.html', {'detailh':detailh})
    

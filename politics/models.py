@@ -6,12 +6,31 @@ class content(models.Model):
     time=models.TimeField()
     image=models.ImageField(upload_to='politics')
     
+       
+    def __str__(self):
+    
+        return self.name
+    
+    class Meta:
+    
+        verbose_name='politics'
     
     
-# def __str__(self):
+class detail(models.Model):
+    id=models.IntegerField(primary_key=True)
+    author = models.CharField(max_length=255)
     
-#     return self.name
+    name=models.ForeignKey(content, on_delete=models.CASCADE,related_name='names')
+    time=models.TimeField()
     
-# class Meta:
+    image=models.ForeignKey(content, on_delete=models.CASCADE,related_name='images')
+    content=models.TextField()
     
-#     verbose_name='1. Content'
+    
+    def __str__(self):
+    
+        return self.name
+    
+    class Meta:
+    
+        verbose_name='detailsp'

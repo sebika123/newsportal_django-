@@ -10,7 +10,7 @@ def politics(request):
 
 
 def details(request):
-    details=politics.objects.filter(id=id)
-    details=politics.objects.get(id=id)
-    return HttpResponse(details[0].content)
+    detailsp_qs=politics.objects.filter(id=id)
+    detailsp=politics.objects.get(id=id)
+    return HttpResponse(request,'detailp.html',{'detailsp':detailsp})
    

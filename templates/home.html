@@ -21,28 +21,29 @@
         <h5 class="card-title">{{p.name}}</h5>
         
         <p class="card-text">{{p.time}}</p>
-        <a href="#" class="btn btn-primary">Click Here
+        <a href="{{p.id}}" class="btn btn-primary">Click Here
           <i class="bi bi-cart"></i>
         </a>
        
-        <button class="btn btn-outline-primary like-btn" data-article-id="{{ article.id }}">
-          <i class="far fa-heart"></i>
-          <span class="like-count">{{ article.like_set.count }}</span>
-      </button>
-      
-      <script>
-          $(document).ready(function() {
-              $('.like-btn').click(function() {
-                  var articleId = $(this).data('article-id');
-                  $.ajax({
-                      method: 'POST',
-                      url: '/likes/create/' + articleId + '/',
-                      success: function(data) {
-                          $('.like-count[data-article-id="' + articleId + '"]').text(data.like_count);
-                      }
-                  });
-              });
-          });
+      <a href="#" class="btn btn-danger">
+        <i class="bi bi-heart"></i>
+      </a>
+
+      <div class="home">
+        {% for article in details %}
+            <div class="news-article">
+                <h2><a href="{% url 'details' article.id %}">{{ article.name }}</a></h2>
+                {% if article.image %}
+                    <img src="{{ article.image.url }}" alt="{{ article.name }}">
+                {% endif %}
+                <p>{{ article.content }}</p>
+                <p>Published by {{ article.author }} on {{ article.time }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    
+      <script src="script.js">
       </script>
       
       </div>
@@ -53,3 +54,4 @@
 {% endfor %}
 
 {% endblock  %}
+

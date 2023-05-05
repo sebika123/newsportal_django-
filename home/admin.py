@@ -10,5 +10,5 @@ class ContentAdmin(admin.ModelAdmin):
 
 @admin.register(Details)
 class DetailAdmin(admin.ModelAdmin):
-    list_display=('name','time','image','author','content')
+    list_display=('name','time','image','author','contents')
 

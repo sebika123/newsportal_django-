@@ -23,13 +23,15 @@ class Detailh(models.Model):
     #image=models.ImageField(upload_to='details')
     image=models.ForeignKey(content, on_delete=models.CASCADE,related_name='images')
     content=models.TextField()
-    def __str__(self):
     
-       return self.name
     
-    class Meta:
+    # def __str__(self):
     
-        verbose_name='detailh' 
+    #    return self.name
+    
+    # class Meta:
+    
+    #     verbose_name='detailh' 
     
         
     

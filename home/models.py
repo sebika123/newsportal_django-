@@ -29,7 +29,8 @@ class Details(models.Model):
     time=models.TimeField()
     
     image=models.ForeignKey(content, on_delete=models.CASCADE,related_name='images')
-    content=models.TextField() 
+    contents=models.TextField() 
+    
     def __str__(self):
     
        return self.name

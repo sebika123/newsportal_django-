@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from politics.models import content
+from politics.models import content,detailp
 
 
 def politics(request):
@@ -9,8 +9,8 @@ def politics(request):
 
 
 
-def details(request):
-    detailsp_qs=politics.objects.filter(id=id)
-    detailsp=politics.objects.get(id=id)
-    return HttpResponse(request,'detailp.html',{'detailsp':detailsp})
+def get_detailp(request,id):
+    detailp_qs=detailp.objects.filter(id=id)
+    detailsp=detailp.objects.get(id=id)
+    return render(request,'detailp.html',{'detailp':detailsp})
    

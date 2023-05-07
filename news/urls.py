@@ -21,12 +21,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ck_uploads/',include('ckeditor_uploader.urls')),
-    path('politics',include('politics.urls',)),
+    path('politics/',include('politics.urls',)),
     path('',include('home.urls')),
     path('home/',include('home.urls')),
     path('health/',include('health.urls')),
     path('accounts/',include('accounts.urls')),
     path('user/',include('user.urls')),
-    path('sports',include('sports.urls'))
+    path('sports/',include('sports.urls'))
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

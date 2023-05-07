@@ -18,8 +18,10 @@ class content(models.Model):
     class Meta:
     
         verbose_name='home' 
+        
+        
     
-class Details(models.Model):
+class Detailho(models.Model):
     id=models.IntegerField(primary_key=True)
     
 
@@ -31,10 +33,10 @@ class Details(models.Model):
     image=models.ForeignKey(content, on_delete=models.CASCADE,related_name='images')
     contents=models.TextField() 
     
-    def __str__(self):
+    # def __str__(self):
     
-       return self.name
+    #    return self.name
     
-    class Meta:
+    # class Meta:
     
-        verbose_name='details'    
+    #     verbose_name='detailho'    

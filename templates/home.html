@@ -29,18 +29,7 @@
         <i class="bi bi-heart"></i>
       </a>
 
-      <div class="home">
-        {% for article in details %}
-            <div class="news-article">
-                <h2><a href="{% url 'details' article.id %}">{{ article.name }}</a></h2>
-                {% if article.image %}
-                    <img src="{{ article.image.url }}" alt="{{ article.name }}">
-                {% endif %}
-                <p>{{ article.content }}</p>
-                <p>Published by {{ article.author }} on {{ article.time }}</p>
-            </div>
-        {% endfor %}
-    </div>
+      
 
     
       <script src="script.js">

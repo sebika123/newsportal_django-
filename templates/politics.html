@@ -27,11 +27,11 @@
         </a>
        
 
-        <button class="btn btn-outline-primary like-btn" data-article-id="{{ h.id }}">
-          <i class="far fa-heart"></i>
+        {% comment %} <button class="btn btn-outline-primary like-btn" data-article-id="{{ h.id }}"> {% endcomment %}
+          {% comment %} <i class="far fa-heart"></i>
           <span class="like-count">{{ h.like_set.count }}</span>
       </button>
-      
+       {% endcomment %}
       
       <script src="script.js">
       </script>

@@ -1,13 +1,7 @@
 
 {% extends 'politics.html' %}
 
-{% block title %}
 
-<div class="col-12">
-    <h2 class="text-center m-5">Politics</h2>
-  </div>
-
-{% endblock%}
 
 
 
@@ -19,12 +13,12 @@
         <div class="news-article">
             
 
-            <h2>{{ detailsp.name }}</h2>
+            <h2>{{detailp.name }}</h2>
             
-                <img src="media/{{ detailsp.image }}" alt="{{detailp.name}}">
+                <img src="media/{{ detailp.image }}" alt="{{detailp.name}}">
             
-            <p>{{ detailps.content }}</p>
-            <p>Published by {{ detailps.author }} on {{ detailps.time }}</p>
+            <p>{{ detailp.contents }}</p>
+            <p>Published by {{ detailp.author }} on {{ detailp.time }}</p>
         </div>
  
 </div>

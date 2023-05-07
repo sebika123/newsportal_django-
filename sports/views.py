@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from sports.models import content
+from sports.models import content,Details
 
 
 def sports(request):
@@ -9,8 +9,10 @@ def sports(request):
 
 
 
-def details(request):
-    details=sports.objects.filter(id=id)
-    details=sports.objects.get(id=id)
-    return HttpResponse(details[0].content)
+
+def details(request,id):
+    
+    details_qs=Details.objects.filter(id=id)
+    details=Details.objects.get(id=id)
+    return render(request, 'detailsp.html', {'details':details})
    

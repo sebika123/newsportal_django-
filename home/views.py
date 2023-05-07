@@ -1,7 +1,7 @@
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.http import HttpResponse
-from home.models import content,Details
+from home.models import content,Detailho
 
 
 def home(request):
@@ -9,14 +9,9 @@ def home(request):
     return render(request,'home.html',{'home':home} )
 
 
-
-
-#def details(request):
-#    details=home.objects.filter(id=id)
- #   details=home.objects.get(id=id)
-  #  return HttpResponse(details[0].content)
    
-def details(request, id):
-    details_qs =Details.object.filter(id=id)
-    details=Details.object.get(id=id)
-    return render(request, 'details.html', {'details':details})
+def detail(request,id):
+    
+    detailho_qs =Detailho.objects.filter(id=id)
+    detailho=Detailho.objects.get(id=id)
+    return render(request,'details.html',{'detailho':detailho})

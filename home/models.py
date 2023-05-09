@@ -22,7 +22,7 @@ class content(models.Model):
         
     
 class Detailho(models.Model):
-    id=models.IntegerField(primary_key=True)
+    id=models.AutoField(primary_key=True)
     
 
     author = models.CharField(max_length=255)

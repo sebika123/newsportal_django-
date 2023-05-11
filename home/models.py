@@ -11,17 +11,18 @@ class content(models.Model):
     name=models.CharField(max_length=255)
     time=models.TimeField()
     image=models.ImageField(upload_to='home')
-    def __str__(self):
     
-       return self.name
+    #def __str__(self):
     
-    class Meta:
+       #return self.name
     
-        verbose_name='home' 
+    #class Meta:
+    
+        #verbose_name='home' 
         
         
     
-class Detailho(models.Model):
+class detailho(models.Model):
     id=models.AutoField(primary_key=True)
     
 
@@ -33,10 +34,12 @@ class Detailho(models.Model):
     image=models.ForeignKey(content, on_delete=models.CASCADE,related_name='images')
     contents=models.TextField() 
     
-    # def __str__(self):
+    #def __str__(self):
+        
     
-    #    return self.name
+        #return self.name
     
-    # class Meta:
+    #class Meta:
+        
     
-    #     verbose_name='detailho'    
+        #verbose_name='Detailho'    

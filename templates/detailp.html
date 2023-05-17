@@ -9,18 +9,18 @@
 
 {% block content %}
 <div class="politics">
-  
+    
         <div class="news-article">
-            
+          
 
-            <h2>{{detailp.name }}</h2>
+            <h2>{{detailp.name}}</h2>
             
-                <img src="media/{{ detailp.image }}" alt="{{detailp.name}}">
+                <img src="{{detailp.image}}" alt="{{detailp.name}}">
             
             <p>{{ detailp.contents }}</p>
             <p>Published by {{ detailp.author }} on {{ detailp.time }}</p>
         </div>
- 
+
 </div>
   
 {% endblock%}

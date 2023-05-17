@@ -13,6 +13,7 @@ def sports(request):
 def details(request,id):
     
     details_qs=Details.objects.filter(id=id)
+    
     details=Details.objects.get(id=id)
     return render(request, 'detailsp.html', {'details':details})
    

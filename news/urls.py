@@ -23,7 +23,7 @@ urlpatterns = [
     path('ck_uploads/',include('ckeditor_uploader.urls')),
     path('politics/',include('politics.urls',)),
     path('',include('home.urls')),
-    #path('home/',include('home.urls')),
+    path('home/',include('home.urls')),
     path('health/',include('health.urls')),
     path('accounts/',include('accounts.urls')),
     path('user/',include('user.urls')),

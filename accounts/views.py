@@ -17,6 +17,7 @@ def login(request):
             return redirect('home')
         else:
             return HttpResponse('wrong credentials')
+            return redirect('home')
         
         
         
@@ -34,10 +35,10 @@ def register(request):
         pw=make_password(request.POST['pw'])
         user=User(first_name=fn,last_name=ln,email=em,mobile=mb,address=ad,username=un,password=pw)
         user.save()
-        return redirect('home')
+        return redirect('/home')
     return HttpResponse('invalid')
       
       
 def logout(request):
     auth.logout(request)
-    return  redirect('home')    
+    return  redirect('/home/')    

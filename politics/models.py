@@ -28,10 +28,4 @@ class detailp(models.Model):
     contents=models.TextField()
     
     
-    # def __str__(self):
-    
-    #     return self.name
-    
-    # class Meta:
-    
-    #     verbose_name='detailp'
+  
